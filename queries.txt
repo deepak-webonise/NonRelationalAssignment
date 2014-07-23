@@ -1,0 +1,22 @@
+﻿
+Create Assessment
+
+db.Assessments.insert({_id:4, Name:"Test 2",Questions:[{id:1,question:"PHP Stands for ?",options:[{id:1, opt:"Preprocessor",flag:0},{id:2 ,opt:"Preprocessor Hypertext",flag:0},{id:3 ,opt:"Hypertext Preprocessor",flag:1},{id:4 ,opt
+:"Hypertext",flag:0}]}]} )
+
+
+
+Update 1st  Question of Assessment
+
+db.Assessments.update({_id:1,'Questions.id':1},{$set:{'Questions.$.question':"xzy?"}})
+
+Query for updating Assessment 1's question, and options to it.
+ db.Assessments.update({_id:4,'Questions.id':1,},{$set:{'Questions.$.question':"oop?",'Questions.$.options.0.opt':”Object”,'Questions.$.options.0.opt':”Oriented”,'Questions.$.options.0.opt':”Object Oriented Program”,'Questions.$.options.0.opt':”Object Programming”}})
+
+
+Query for deleting Assessment 2's question 3's option 2
+db.Assessments.update({_id:2,'Questions.id':3},{$pull:{'Questions.$.options':{id:2}}}) 
+
+
+
+

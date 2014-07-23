@@ -1,0 +1,36 @@
+﻿
+Assessments = {
+			_id : <Assessment id>
+			Name : <Assessment Name>
+			Questions: [
+					{
+			   			 question:<Question>
+			  			  options:[
+								{option: , flag: }
+				    			 ]
+
+					}
+
+		    		  ]
+			User_id:[
+					<User IDs who answered for assessment>
+				]
+
+		}
+
+Users ={
+		_id : <User id>
+		Name : <User Name>
+		Assessments: [
+					{
+						Assessment_id: , 
+						Answers :[
+								{question_id: , answer: }
+								]
+			   			
+					}
+				     ]
+
+		
+		
+	}

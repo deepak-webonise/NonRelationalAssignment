@@ -1,0 +1,20 @@
+﻿BASE (Basically Availability Soft state Eventual Consistency)
+
+Basically Availability
+The system does not guarntees the availibility of data for a request. When user request, there will be  reponse but that response still could be failure or inconsisten data.
+
+Soft State
+
+The system may change its state without any request from user. The changes going on due to eventual consistency.
+
+
+
+Eventual Consistency
+The system not check for the consistency before it receive the next request. The system will eventually  become consistent when its stop receiveing request. Two types of Eventual Consistency we can categorise
+ Client : The user getting the updated information .
+Server: As the databse is distributed among different nodes/systems are updating faster or slower.
+
+
+1. No SQL can be used when we need  high  Performance and Reliability.
+2. Weak Consistency.
+

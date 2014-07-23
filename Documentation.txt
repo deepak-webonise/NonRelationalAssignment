@@ -1,0 +1,43 @@
+﻿Installation
+MongoDB package contains 5 packages inside
+
+mongod is the primary daemon process for the MongoDB system. It handles data requests, manages data format, and performs background management operations.
+
+1. MongoDB : This package installs the other 4 Packages mentioned below.
+	This package includes Control Scripts , which are simple shell scripts located in /etc/rc.d or /etc/init.d and used to start and stop deamons at system start up.
+
+2. MongoDB-org-server : This package contains the main process of MongoDB i.e mongod ,configuaration files and init scripts which required to start MongoDB-server.
+
+3. MongoDB-org : This package contains the deamon mongos i.e Mongo Shard is routing service for MongoDB Shard configuarations, the process queries from application layer and determines location of data in order to complete operations.
+
+4. MongoDB-org-shell : This package contains mongo shell. Mongo shell is interactive javascript shell which provides powerful interface for System Administrator , Developers to complete operations on Database.
+
+5. MongoDb-org-tools :  This package contains different tools like
+	mongoimport tool which provides a route to import from JSON,CSV or TSV export created 	by  mongoexport.
+
+
+The Ubuntu package management tools  ensure package consistency and authenticity by requiring that distributors sign packages with GPG keys. Issue following command to import key
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+
+
+
+List the sources to download the MongoDB . 
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+
+Update the local package databse 
+sudo apt-get update
+Now System is ready to download and install MongoDB
+sudo apt-get install mongodb-org
+the above command installs the current stable version of MongoDB.
+For Specific version installation use following command
+sudo apt-get install mongodb-org=2.6.1 mongodb-org-server=2.6.1 
+
+
+
+
+
+
+
+
+
